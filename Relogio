@@ -1,0 +1,25 @@
+package pacote_java;
+
+public class Aula_15 {
+	public static void main(String[] args) {
+		long totalMilisegundos = System.currentTimeMillis() - 10800000;
+		//Comando para colocar o horario de acordo com o meridiano(00:00)
+    //00:00 - 10800000 = fuso horario do brasil (-03:00)
+		int i = 0;
+		
+		long totalSegundos = totalMilisegundos /1000;
+		long segundoAtual = totalSegundos % 60;
+		//guarda os segundos
+		long totalMinutos = totalSegundos / 60;
+		long minutoAtual = totalMinutos % 60;
+		//guarda os minutos
+		long totalHora = totalMinutos / 60;
+		long horaAtual = totalHora % 24;
+    //guarda as horas
+		while(i < 1){
+		  System.out.println(horaAtual+":"+minutoAtual+":"+segundoAtual);
+		}
+		
+	}
+
+}
